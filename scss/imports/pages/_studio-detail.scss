@@ -1,0 +1,293 @@
+.studio-detail {
+  @include mobile {
+    padding-top: 60px;
+  }
+  .allInfo {
+    @include mobile {
+      margin-bottom: 40px;
+    }
+    .container {
+      @include mobile {
+        padding: unset;
+      }
+    }
+    .back-group {
+      @include mobile {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+      justify-content: flex-end;
+      a {
+        margin: 30px 0;
+      }
+    }
+
+    &__imgs {
+      position: relative;
+      .preNext-mobile {
+        @include mobile {
+          position: absolute;
+          @include flexMid(space-between);
+          padding: 0 20px;
+          z-index: 1;
+        }
+        cursor: pointer;
+        display: none;
+        width: 100%;
+        height: 100%;
+        div {
+          z-index: 2;
+          svg {
+            width: 25px;
+            height: 25px;
+            * {
+              fill: $white-cl;
+            }
+          }
+        }
+      }
+      .main-carousel {
+        .carousel {
+          height: 480px;
+          width: 100%;
+          @include mobile {
+            height: 175px;
+          }
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+
+    &__options {
+      @include mobile {
+        justify-content: unset;
+      }
+      display: flex;
+      justify-content: space-around;
+      .para-box,
+      .download-box,
+      .move-page,
+      .full-screen {
+        @include mobile {
+          margin: 20px 30px 0;
+        }
+        margin-top: 30px;
+      }
+      .para-box {
+        .title {
+          letter-spacing: 2px;
+        }
+        .size {
+          p {
+            font-size: $fz-text-m1;
+          }
+        }
+      }
+      .download-box {
+        @include mobile {
+          display: none;
+        }
+        height: fit-content;
+        a {
+          @include flexMid;
+          &:hover p {
+            color: $yellow-cl;
+          }
+          p {
+            font-size: $fz-text-m;
+            margin-right: 10px;
+            @include transition($t);
+          }
+        }
+      }
+      .move-page {
+        @include mobile {
+          display: none;
+        }
+        display: flex;
+        height: fit-content;
+        .button {
+          @include flexMid;
+          cursor: pointer;
+          p {
+            font-size: $fz-text-m;
+          }
+          &:nth-child(1) {
+            &:hover p {
+              color: $yellow-cl;
+            }
+            &:hover div {
+              @include transform(translateX(-5px));
+            }
+            &:hover div svg {
+              * {
+                @include transition($t);
+                fill: $yellow-cl;
+              }
+            }
+            div {
+              @include transition($t);
+            }
+            p {
+              padding: 0 10px;
+              border-right: 1px solid $black-cl;
+              @include transition($t);
+            }
+          }
+          &:nth-child(2) {
+            &:hover p {
+              color: $yellow-cl;
+            }
+            &:hover div {
+              @include transform(translateX(5px));
+            }
+            &:hover div svg {
+              * {
+                @include transition($t);
+                fill: $yellow-cl;
+              }
+            }
+            div {
+              @include transition($t);
+            }
+            p {
+              padding: 0 10px;
+              @include transition($t);
+            }
+          }
+        }
+      }
+    }
+    .full-line {
+      @include mobile {
+        display: none;
+      }
+    }
+  }
+  .booked {
+    &__wrapper {
+      @include tablet {
+        grid-template-columns: 326px 1fr;
+      }
+      @include mobile {
+        grid-template-columns: 1fr;
+        padding-left: unset;
+      }
+      display: grid;
+      grid-template-columns: 460px 1fr;
+      padding-left: 35px;
+      .left {
+        .booked__price {
+          .note {
+            @include mobile {
+              max-width: 230px;
+            }
+            margin: 20px 0;
+            p {
+              @include mobile {
+                strong {
+                  display: block;
+                }
+                line-height: 20px;
+              }
+              font-size: $fz-text-m1;
+            }
+          }
+          .price-frame {
+            &__wrapper {
+              display: flex;
+              justify-content: space-between;
+              border-top: 1px solid $black-cl;
+              border-right: 1px solid $black-cl;
+              border-left: 1px solid $black-cl;
+              padding: 15px 20px 15px 60px;
+              p {
+                font-size: $fz-text-m1;
+              }
+              &:last-child {
+                border-bottom: 1px solid $black-cl;
+              }
+              &:first-child {
+                padding-top: 25px;
+              }
+            }
+          }
+        }
+        .booked__plan {
+          @include mobile {
+            display: block;
+            .title-bold {
+              margin-top: 40px;
+            }
+            .para-frame {
+              margin-top: 20px;
+            }
+          }
+          display: none;
+        }
+        .booked__specs {
+          h2 {
+            @include mobile {
+              margin: 40px 0 20px;
+            }
+            margin: 120px 0 30px;
+          }
+          .wrapper {
+            font-size: $fz-text-m1;
+            p:nth-child(3) {
+              margin: 20px 0;
+            }
+          }
+        }
+      }
+      .right {
+        @include mobile {
+          margin-left: 0;
+        }
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        margin-left: 60px;
+        .booked__plan {
+          @include mobile {
+            display: none;
+          }
+        }
+        .booked__para {
+          p {
+            font-size: $fz-text-m1;
+            margin-top: 20px;
+          }
+        }
+      }
+    }
+    &__click {
+      @include mobile {
+        margin-top: 20px;
+      }
+      @include flexMid;
+      flex-direction: column;
+      margin-top: 60px;
+      .click-box {
+        margin-bottom: 40px;
+        animation: moveDown infinite 1s;
+      }
+      .book-box {
+        a {
+          strong:first-child {
+            letter-spacing: 1px;
+            font-size: 20px;
+          }
+          strong:last-child {
+            letter-spacing: 1px;
+            font-size: 24px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,77 @@
+:root {
+  @include mobile {
+    --width: 200px;
+  }
+  --width: 400px;
+}
+.studio {
+  .info {
+    &__wrap {
+      @include mobile {
+        row-gap: 10px;
+      }
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(var(--width), 1fr));
+      column-gap: 20px;
+      row-gap: 40px;
+      margin-top: 75px;
+      &--child {
+        height: 420px;
+        @include transition($t);
+        &:hover .info-box {
+          background-color: $brown-cl;
+        }
+        &:hover .para-box,
+        &:hover .detail-box {
+          color: $white-cl;
+        }
+        &:hover .detail-box svg {
+          * {
+            @include transition($t);
+            fill: $yellow-cl;
+          }
+        }
+        &:hover .img::after {
+          @include hidden;
+        }
+        &:hover .img img {
+          @include transform(translate(-50%, -50%) scale(1.1));
+        }
+        .img {
+          height: 300px;
+          position: relative;
+          overflow: hidden;
+          &::after {
+            content: "";
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba($black-cl, 0.5);
+            z-index: 1;
+            @include transition($t);
+          }
+          img {
+            @include imgMid;
+            @include transition($t);
+          }
+        }
+        .info-box {
+          display: flex;
+          justify-content: space-between;
+          .para-box {
+            @include mobile {
+              margin-top: 10px;
+            }
+            @include mobile_lc {
+              margin-left: 10px;
+              font-size: 10px;
+            }
+            margin-top: 40px;
+          }
+        }
+      }
+    }
+  }
+}

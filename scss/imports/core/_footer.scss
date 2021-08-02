@@ -1,0 +1,187 @@
+footer {
+  .footer-wrap {
+    .container {
+      @include mobile {
+        padding: unset;
+        margin: unset;
+      }
+      .address {
+        @include mobile {
+          text-align: center;
+          flex-direction: column;
+        }
+        display: flex;
+        font-size: $fz-text-m;
+        .left {
+          @include mobile {
+            width: 100%;
+          }
+          width: 50%;
+          text-transform: uppercase;
+          .email {
+            @include mobile {
+              margin: 14px 0;
+            }
+            margin: 14px 0 42px;
+          }
+          .tel {
+            @include mobile {
+              justify-content: center;
+              align-items: center;
+            }
+            display: flex;
+            h4 {
+              margin-right: 25px;
+            }
+          }
+        }
+        .right {
+          @include mobile {
+            width: 100%;
+            display: none;
+          }
+          width: 50%;
+          & > div {
+            p {
+              text-transform: uppercase;
+              margin-bottom: 14px;
+            }
+          }
+        }
+      }
+    }
+    &.--bg {
+      @include mobile {
+        background-color: transparent;
+        padding: 14px 0 0;
+      }
+      background-color: $yellow-cl;
+      padding: 25px 0 165px;
+      .container {
+        .address {
+          .left {
+            .address__company {
+              span {
+                display: block;
+                margin: 14px 0;
+              }
+            }
+          }
+          .right {
+            form {
+              display: grid;
+              grid-template-columns: repeat(2, 1fr);
+
+              .right__element {
+                position: relative;
+                label {
+                  display: block;
+                }
+                input[type="text"],
+                input[type="email"] {
+                  height: 30px;
+                  border: none;
+                  border-bottom: 1px solid $black-cl;
+                  outline: none;
+                  width: calc(100% - 15px);
+                  background-color: transparent;
+                  margin-bottom: 30px;
+                  font-size: 10px;
+                }
+                .message {
+                  position: relative;
+                  &::after {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    width: calc(100% - 15px);
+                    height: 0.5px;
+                    background: $black-cl;
+                    bottom: -29px;
+                  }
+                }
+                textarea {
+                  width: calc(100% - 15px);
+                  height: 78px;
+                  overflow: hidden;
+                  font-size: 10px;
+                  resize: none;
+                  border: none;
+                  outline: none;
+                  margin-top: -8px;
+                  line-height: 400%;
+                  border-bottom: 1px solid $black-cl;
+                  background-color: transparent;
+                }
+                input[type="submit"] {
+                  cursor: pointer;
+                  position: absolute;
+                  bottom: 12px;
+                  right: 15px;
+                  width: 50px;
+                  height: 20px;
+                  font-size: 10px;
+                  text-transform: uppercase;
+                  font-family: pb;
+                  background-color: $black-cl;
+                  color: $white-cl;
+                  outline: none;
+                  border: none;
+                  @include transition($t);
+                  &:hover {
+                    background-color: $white-cl;
+                    color: $yellow-cl;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .to-top {
+        @include mobile {
+          margin-top: 40px;
+          background-color: $yellow-cl;
+          padding: 50px 0 145px;
+        }
+        margin-top: 45px;
+        text-align: center;
+        .button {
+          animation: moveTopInf infinite 2s;
+          cursor: pointer;
+          margin-bottom: 20px;
+        }
+        .copy {
+          @include mobile {
+            font-size: 10px;
+          }
+          p {
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+          }
+        }
+      }
+    }
+    &.--contact {
+      @include mobile {
+        padding-top: unset;
+      }
+      .address {
+        .left {
+          @include mobile {
+            display: none;
+          }
+          p {
+            margin-bottom: 20px;
+          }
+        }
+      }
+      .to-top {
+        @include mobile {
+          margin-top: unset;
+        }
+      }
+    }
+  }
+}

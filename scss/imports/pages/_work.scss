@@ -1,0 +1,53 @@
+.work {
+  @include mobile {
+    padding-top: 100px;
+  }
+  .category {
+    &__list {
+      @include mobile {
+        display: flex !important;
+      }
+    }
+    &__more {
+      &.--work {
+        @include mobile {
+          grid-template-columns: 1fr;
+        }
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        .wrapper {
+          @include mobile {
+            flex-direction: column;
+          }
+          @include flexMid(space-between);
+
+          .booked-group {
+            @include mobile {
+              flex-direction: column;
+              order: -1;
+            }
+            display: flex;
+            .text {
+              @include mobile {
+                margin: unset;
+                text-align: center;
+              }
+              text-align: right;
+              margin-right: 35px;
+              p {
+                font-size: $fz-text-m;
+              }
+            }
+            .book-box {
+              @include mobile {
+                animation: unset;
+                margin: 10px 0 60px;
+              }
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

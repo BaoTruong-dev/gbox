@@ -1,0 +1,20 @@
+.homepage {
+  .category {
+    @include mobile {
+      margin-top: 0;
+    }
+    margin-top: 50px;
+    &__products {
+      &--box {
+        .info-box {
+          &.hidden {
+            display: none;
+          }
+          &.show {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
