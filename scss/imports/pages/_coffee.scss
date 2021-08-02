@@ -1,9 +1,9 @@
 .coffee {
   @include mobile {
-    background: url("../../../img/cafeGbox/background-mobile.jpg") no-repeat;
+    background: url("../img/cafeGbox/background-mobile.jpg") no-repeat;
     background-size: 100% 550px;
   }
-  background: url("../../../img/cafeGbox/background-intro.jpg") no-repeat;
+  background: url("../img/cafeGbox/background-intro.jpg") no-repeat;
   background-size: 100% 375px;
   z-index: 1;
   .introduce {

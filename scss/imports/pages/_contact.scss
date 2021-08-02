@@ -1,12 +1,12 @@
 .contact {
   .address {
     @include mobile {
-      background: url("../../../img/cafeGbox/background-mobile.jpg") center
-        center no-repeat;
+      background: url("../img/cafeGbox/background-mobile.jpg") center center
+        no-repeat;
       background-size: 100% 100%;
       padding-top: 150px;
     }
-    background: url("../../../img/cafeGbox/background-intro.jpg") center center
+    background: url("../img/cafeGbox/background-intro.jpg") center center
       no-repeat;
     background-size: 100% 100%;
     &__logo {
