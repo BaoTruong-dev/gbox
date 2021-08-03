@@ -180,6 +180,7 @@ footer {
       .to-top {
         @include mobile {
           margin-top: unset;
+          padding-bottom: 62px;
         }
       }
     }
