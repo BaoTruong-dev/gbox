@@ -1,4 +1,36 @@
 footer {
+  &.justContactFooter {
+    @include mobile {
+      position: fixed;
+      height: 100%;
+      width: 100%;
+    }
+    .footer-wrap {
+      @include mobile {
+        padding-top: 0 !important;
+      }
+      height: 100%;
+      .container {
+        height: 100%;
+        .address {
+          .left {
+            @include mobile {
+              display: none;
+            }
+            p {
+              margin-bottom: 20px;
+            }
+          }
+        }
+        .to-top {
+          @include mobile {
+            margin-top: unset !important;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
   .footer-wrap {
     .container {
       @include mobile {
@@ -160,27 +192,6 @@ footer {
             text-transform: uppercase;
             letter-spacing: 1px;
           }
-        }
-      }
-    }
-    &.--contact {
-      @include mobile {
-        padding-top: unset;
-      }
-      .address {
-        .left {
-          @include mobile {
-            display: none;
-          }
-          p {
-            margin-bottom: 20px;
-          }
-        }
-      }
-      .to-top {
-        @include mobile {
-          margin-top: unset;
-          padding-bottom: 62px !important;
         }
       }
     }
