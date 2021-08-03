@@ -5,7 +5,7 @@
   }
   background: url("../img/cafeGbox/background-intro.jpg") no-repeat;
 
-  background-size: 100% 375px;
+  background-size: 100% 0;
   z-index: 1;
   .introduce {
     @include mobile {
