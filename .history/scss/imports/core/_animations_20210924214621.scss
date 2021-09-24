@@ -69,6 +69,7 @@
     opacity: 0;
     @include transform(translateX(-200px));
     color: $yellow-cl;
+    font-weight: 700;
   }
   50% {
     opacity: 1;
@@ -103,19 +104,7 @@
   50% {
     @include transform(scale(1.2));
   }
-  60% {
-    @include transform(scale(1) translate(-3px, 0) rotate(1deg));
-  }
-  70% {
-    @include transform(scale(1) translate(-1px, 2px) rotate(-1deg));
-  }
-  80% {
-    @include transform(scale(1) translate(3px, -2px) rotate(0deg));
-  }
-  90% {
-    @include transform(scale(1) translate(-3px, 2px) rotate(1deg));
-  }
   100% {
-    @include transform(scale(1) translate(0, 0) rotate(0deg));
+    @include transform(scale(1));
   }
 }

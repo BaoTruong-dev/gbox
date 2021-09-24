@@ -146,14 +146,15 @@
     .introduce__hi {
       font-size: 14px;
       text-transform: uppercase;
-      animation: fromLeft 2s;
+      // animation: visibleText 1s var(--delay) 1;
+      @include transform(translateY(30px));
+      transition-delay: var(--delay);
       span {
         display: block;
       }
     }
     .introduce__title {
       margin: 20px 0;
-      animation: fromRight 2s;
     }
     .introduce__text {
       @include mobile {
@@ -161,7 +162,6 @@
       }
       max-width: 750px;
       margin: 0 auto;
-      animation: visibleText 2s;
       p {
         width: 100%;
         font-size: 12px;

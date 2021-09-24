@@ -153,7 +153,6 @@
     }
     .introduce__title {
       margin: 20px 0;
-      animation: fromRight 2s;
     }
     .introduce__text {
       @include mobile {
@@ -161,7 +160,6 @@
       }
       max-width: 750px;
       margin: 0 auto;
-      animation: visibleText 2s;
       p {
         width: 100%;
         font-size: 12px;

@@ -64,58 +64,12 @@
   }
 }
 
-@keyframes fromLeft {
-  0% {
-    opacity: 0;
-    @include transform(translateX(-200px));
-    color: $yellow-cl;
-  }
-  50% {
-    opacity: 1;
-    @include transform(translateX(200px));
-    color: $red-cl;
-  }
-  100% {
-    opacity: 1;
-    @include transform(translateX(0));
-  }
-}
-
-@keyframes fromRight {
-  0% {
-    opacity: 0;
-    @include transform(translateX(200px));
-  }
-  50% {
-    opacity: 1;
-    @include transform(translateX(-200px));
-  }
-  100% {
-    opacity: 1;
-    @include transform(translateX(0));
-  }
-}
-
 @keyframes visibleText {
   0% {
+    opacity: 0;
     @include transform(scale(0));
   }
-  50% {
-    @include transform(scale(1.2));
-  }
-  60% {
-    @include transform(scale(1) translate(-3px, 0) rotate(1deg));
-  }
-  70% {
-    @include transform(scale(1) translate(-1px, 2px) rotate(-1deg));
-  }
-  80% {
-    @include transform(scale(1) translate(3px, -2px) rotate(0deg));
-  }
-  90% {
-    @include transform(scale(1) translate(-3px, 2px) rotate(1deg));
-  }
   100% {
-    @include transform(scale(1) translate(0, 0) rotate(0deg));
+    @include transform(scale(1));
   }
 }
