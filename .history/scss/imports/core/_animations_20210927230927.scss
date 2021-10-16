@@ -1,0 +1,88 @@
+@keyframes moveTopInf {
+  0% {
+    @include transform(translateY(0px));
+    opacity: 1;
+  }
+  50% {
+    @include transform(translateY(-20px));
+    opacity: 1;
+  }
+  80% {
+    @include transform(translateY(-20px));
+    opacity: 0;
+  }
+  100% {
+    @include transform(translateY(0));
+    opacity: 0;
+  }
+}
+
+@keyframes constantScale {
+  0% {
+    -webkit-transform: scale(1) translate3d(0, 0, 0) perspective(1px);
+    -moz-transform: scale(1) translate3d(0, 0, 0) perspective(1px);
+    -o-transform: scale(1) translate3d(0, 0, 0) perspective(1px);
+    -ms-transform: scale(1) translate3d(0, 0, 0) perspective(1px);
+    transform: scale(1) translate3d(0, 0, 0) perspective(1px);
+  }
+  50% {
+    -webkit-transform: scale(1.1) translate3d(0, 0, 0) perspective(1px);
+    -moz-transform: scale(1.1) translate3d(0, 0, 0) perspective(1px);
+    -o-transform: scale(1.1) translate3d(0, 0, 0) perspective(1px);
+    -ms-transform: scale(1.1) translate3d(0, 0, 0) perspective(1px);
+    transform: scale(1.1) translate3d(0, 0, 0) perspective(1px);
+    -webkit-box-shadow: 5px 5px 15px 5px #ff8080, -9px 5px 15px 5px #ffe488,
+      -7px -5px 15px 5px #8cff85, 12px -5px 15px 5px #80c7ff,
+      12px 10px 15px 7px #e488ff, -10px 10px 15px 7px #ff616b,
+      -10px -7px 27px 1px #8e5cff, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+    box-shadow: 5px 5px 15px 5px #ff8080, -9px 5px 15px 5px #ffe488,
+      -7px -5px 15px 5px #8cff85, 12px -5px 15px 5px #80c7ff,
+      12px 10px 15px 7px #e488ff, -10px 10px 15px 7px #ff616b,
+      -10px -7px 27px 1px #8e5cff, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  }
+  100% {
+    -webkit-transform: scale(1) translate3d(0, 0, 0) perspective(1px);
+    -moz-transform: scale(1) translate3d(0, 0, 0) perspective(1px);
+    -o-transform: scale(1) translate3d(0, 0, 0) perspective(1px);
+    -ms-transform: scale(1) translate3d(0, 0, 0) perspective(1px);
+    transform: scale(1) translate3d(0, 0, 0) perspective(1px);
+  }
+}
+
+@keyframes moveDown {
+  0% {
+    opacity: 0;
+    @include transform(translateY(0));
+  }
+  50% {
+    opacity: 1;
+    @include transform(translateY(15px));
+  }
+  100% {
+    opacity: 0;
+    @include transform(translateY(15px));
+  }
+}
+
+@keyframes fromRight {
+  0% {
+    opacity: 0;
+    @include transform(translateX(50px));
+  }
+  89% {
+    opacity: 1;
+    @include transform(translateX(0));
+  }
+  90% {
+    opacity: 1;
+    @include transform(translateX(-10px));
+  }
+  95% {
+    opacity: 1;
+    @include transform(translateX(5px));
+  }
+  100% {
+    opacity: 1;
+    @include transform(translateX(0));
+  }
+}
