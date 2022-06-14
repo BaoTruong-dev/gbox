@@ -248,5 +248,5 @@ $(window).ready(function () {
 
 // redirect to other link
 $('.info__wrap--child').click(() => {
-    window.location.href = 'http://localhost:3000/studio-details.html';
+    window.location.href = 'https://baotruong-dev.github.io/gbox/studio-details.html';
 });
