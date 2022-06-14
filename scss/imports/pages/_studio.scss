@@ -17,6 +17,7 @@
       margin-top: 75px;
       &--child {
         height: 420px;
+        cursor: pointer;
         @include transition($t);
         &:hover .info-box {
           background-color: $brown-cl;

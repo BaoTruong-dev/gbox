@@ -1,4 +1,3 @@
-
 $.fn.svgToInline = function (options) {
     'use strict';
 
@@ -9,11 +8,11 @@ $.fn.svgToInline = function (options) {
 
     this.each(function () {
         var svg = {
-                currency: $(this),
-                oldClass: '',
-                newClass: '',
-                path: $(this).attr('data') || $(this).attr('src')
-            },
+            currency: $(this),
+            oldClass: '',
+            newClass: '',
+            path: $(this).attr('data') || $(this).attr('src')
+        },
             request = {
                 element: '',
                 svgTag: '',
@@ -38,7 +37,7 @@ $.fn.svgToInline = function (options) {
             dataType: 'text',
             success: function (response) {
                 request.element = response.replace(/<[?!][\s\w\"-\/:=?]+>/g, ''),
-                request.svgTag = request.element.match(/<svg[\w\s\t\n:="\\'\/.#-]+>/g);
+                    request.svgTag = request.element.match(/<svg[\w\s\t\n:="\\'\/.#-]+>/g);
                 request.svgTagWithoutClass = request.svgTag[0].replace(/class=\"[\w\s-_]+\"/, '');
                 svg.oldClass = request.svgTag[0].match(/class=\"(.*?)\"/);
 
@@ -49,7 +48,7 @@ $.fn.svgToInline = function (options) {
 
                 request.svgTagWithoutClass = request.svgTagWithoutClass.replace('>', ' ' + svg.newClass + '>');
 
-                svg.currency.replaceWith( request.element.replace(/<svg[\w\s\t\n:="\\'\/.#-]+>/g, request.svgTagWithoutClass) );
+                svg.currency.replaceWith(request.element.replace(/<svg[\w\s\t\n:="\\'\/.#-]+>/g, request.svgTagWithoutClass));
             }
         });
     });

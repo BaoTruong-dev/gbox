@@ -6,9 +6,9 @@ $(window).on('load', function () {
         x: 80,
         ease: "elastic.out(1, 0.3)",
         stagger: .5
-    })
+    });
+    $('.svg').svgToInline();
 });
-
 // Mobile nav
 let topLine = $('.menu-hamburger #top');
 let midLine = $('.menu-hamburger #mid');
@@ -19,7 +19,7 @@ $('.menu-hamburger').on('click', () => {
     topLine.toggleClass('close');
     botLine.toggleClass('close');
     mobileNav.toggleClass('active');
-})
+});
 
 
 // Button Top
@@ -30,27 +30,27 @@ $('.to-top .button').on('click', () => {
             top: -heightBody,
             behavior: 'smooth',
         }
-    )
-})
+    );
+});
 
 // Category
-let listFilter = document.querySelectorAll('.category__list li')
+let listFilter = document.querySelectorAll('.category__list li');
 let categoryBox = document.querySelectorAll('.category__products .category__products--box .info-box');
 listFilter.forEach((item) => {
     item.addEventListener('click', function (e) {
         e.preventDefault();
         listFilter.forEach(function (li) {
             li.classList.remove('active');
-        })
+        });
         item.classList.add('active');
         let dataId = item.getAttribute('data-id');
         categoryBox.forEach(function (info) {
             info.classList.add('hidden');
-        })
+        });
         if (dataId == '--all') {
             categoryBox.forEach(function (info) {
                 info.classList.remove('hidden');
-            })
+            });
         }
         categoryBox.forEach(function (li) {
             let liData = li.getAttribute('data-id');
@@ -59,10 +59,10 @@ listFilter.forEach((item) => {
             } else {
                 li.classList.remove('show');
             }
-        })
+        });
 
-    })
-})
+    });
+});
 
 // Slider detail-studio
 let $carousel = $('.allInfo__imgs .main-carousel');
@@ -244,4 +244,9 @@ $(window).ready(function () {
 // photoswipe gallery coffee
 $(window).ready(function () {
     initPhotoSwipeFromDOM('.coffee .gallery .gallery__carousel .gallery__carousel--wrapper');
+});
+
+// redirect to other link
+$('.info__wrap--child').click(() => {
+    window.location.href = 'http://localhost:3000/studio-details.html';
 });
